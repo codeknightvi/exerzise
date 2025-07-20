@@ -11,32 +11,25 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { setToken } from "../../features/slices/tokenSlice";
 import { Formprops } from "../../interfaces/propTypes";
-import { loginForm, registerform } from "../../base";
+import { loginForm, registerform } from "../../../config/formConfig";
 
-export const Form1 = ({ setPageState, pageState }: Formprops) => {
-  // const formRef = useRef<HTMLInputElement>();
+export const Form = ({ setPageState, pageState }: Formprops) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [login, { isLoading: isUpdating }] = useLoginMutation();
   const [register] = useRegisterMutation();
 
-  let formArr = pageState === "register" ? registerform : loginForm;
+  const formArr = pageState === "register" ? registerform : loginForm;
   const initialFormValue = getInitialFormObjects(formArr);
   const [formValue, setFormvalue] = useState(initialFormValue);
-  useEffect(() => {
-    // formRef.current.reset();
-    // formRef.current!.value = "";
-  }, [pageState]);
+
   useEffect(() => {
     setFormvalue(initialFormValue);
-    // console.log(initialFormValue);
-  }, [pageState]);
+  }, [pageState, initialFormValue]);
+
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (pageState === "login") {
-      // const wait = toast.loading("Please wait...");
-
-      // console.log("formValue", formValue);
       const resolveAfter3Sec = new Promise((resolve) => {
         setTimeout(resolve, 3000);
       });
@@ -77,8 +70,6 @@ export const Form1 = ({ setPageState, pageState }: Formprops) => {
           toast.error(err.data.message);
         });
     }
-    // formRef.current.reset();
-    // formRef.current!.value = "";
   };
 
   return (
@@ -124,4 +115,4 @@ export const Form1 = ({ setPageState, pageState }: Formprops) => {
     </>
   );
 };
-export default Form1;
+export default Form;

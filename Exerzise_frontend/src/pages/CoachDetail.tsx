@@ -6,7 +6,7 @@ import {
   convertByTimeType,
   getOverlappingMinutes,
 } from "../function/extend_index";
-import DayPicker from "../components/DayPicker";
+// import DayPicker from "../components/DayPicker";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import {
@@ -169,12 +169,12 @@ const CoachDetail = () => {
          */}
         {isSuccess && <CoachCard key={coach.userId} userId={coach.userId} />}
         <div>
-          <DayPicker
+          {/* <DayPicker
             currentDate={currentDate}
             currentDay={currentDay}
             setDayAdded={setDayAdded}
             setCurrentDay={setCurrentDay}
-          />
+          /> */}
           <div className="grid grid-cols-7 gap-3 ">
             {/*newly filtered with chosen original */}{" "}
             {coachSceduleLoading

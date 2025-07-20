@@ -26,13 +26,3 @@ const Body1 = () => {
 };
 
 export default Body1;
-{
-  /* <div className="md:mt-[150px] relative">
-        <div className="static md:absolute -top-[250px] ">
-          <Bars />
-        </div>
-        <div>
-          <Body1 />
-        </div>
-</div>*/
-}

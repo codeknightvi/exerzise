@@ -63,7 +63,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="nav flex justify-between mx-10 mb-4 ">
+    <div className="nav flex justify-between mx-10 mb-4">
       <ul className="hidden md:flex max-lg:hidden justify-center items-center ">
         {pages.map((el, index) => (
           <NavLink

@@ -10,7 +10,7 @@ import CompleteBookingPopup from "./../components/Popup_Complete";
 import Blank from "./Blank";
 import StatusPopup from "./Popup_Status";
 import { useAppSelector } from "../store";
-import { statusBackground, statusButton } from "../base";
+import { statusBackground, statusButton } from "../../config/status";
 import { getExpired } from "../function";
 export interface bookingProps {
   expired?: boolean;

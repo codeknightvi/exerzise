@@ -11,23 +11,25 @@ import HomeCover from "../components/HomeCover";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <HomeCover />
-      <div className="md:mt-[150px] relative ">
-        <div>
-          <Body1 />
-        </div>
+
+      <div className="md:mt-[150px] relative">
+        <Body1 />
         <div className="static md:absolute -top-[270px] left-[50%] md:-translate-x-1/2 ">
           <Bars />
         </div>
       </div>
+
       <div className="my-5">
         <Benefits />
       </div>
+
       <div className="my-5">
         <Testomonials />
       </div>
+
       <div className="my-5">
         <h1 className="text-2xl text-center my-5">Gallery</h1>
         <Gallery />
@@ -37,9 +39,10 @@ const HomePage = () => {
         <h1 className="text-2xl text-center my-5">Activities</h1>
         <ActivitiesBox />
       </div>
+
       <FGrid />
       <Footer />
-    </div>
+    </>
   );
 };
 

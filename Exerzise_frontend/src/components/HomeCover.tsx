@@ -1,12 +1,14 @@
+import { coverImg } from "../../constant/images";
+
 const HomeCover = () => {
   return (
-    <div className="cover-container">
+    <div className="relative overflow-hidden w-full h-[calc(100vh-16px-80px)]">
       <img
-        className="cover"
-        src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D"
-        alt=""
+        className="w-full object-cover"
+        src={coverImg.img}
+        alt={coverImg.alt}
       />
-      <div className="cover-header text-8xl">Welcome to Exerzise</div>
+      <div className="center-axis-x text-8xl">Welcome to Exerzise</div>
     </div>
   );
 };

@@ -15,7 +15,6 @@ export const ProtectedRoute = ({
   children,
   accessibleRole,
 }: protectedRouteprops) => {
-  // console.log("user local from route", user);
   const usernow = useAppSelector((state) => state.user);
 
   if (!accessibleRole.includes(user || usernow.role)) {
@@ -25,11 +24,5 @@ export const ProtectedRoute = ({
     return <Navigate to={redirectPath} replace />;
   }
 
-  return children ? (
-    children
-  ) : (
-    <Outlet />
-    // <ToastProvider>
-    // </ToastProvider>
-  );
+  return children ? children : <Outlet />;
 };
