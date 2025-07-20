@@ -1,6 +1,6 @@
-import { PageHeaderCoverPropType } from "../interfaces/propTypes";
+import { IPageHeaderCover } from "../interfaces/propTypes";
 
-const PageHeaderCover = ({ header, background }: PageHeaderCoverPropType) => {
+const PageHeaderCover = ({ header, background }: IPageHeaderCover) => {
   return (
     <div className="relative h-[360px]">
       <img

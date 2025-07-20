@@ -5,6 +5,7 @@ import PageHeaderCover from "../components/PageHeaderCover";
 import Blogs from "../components/Blogs";
 import BlogCategories from "../components/BlogCategories";
 import { ChangeEvent, useState } from "react";
+import { pageHeaders } from "../../constant/pageHeaders";
 
 const AboutPage = () => {
   const [_searchInput, setSearchInput] = useState<string>("");
@@ -30,10 +31,8 @@ const AboutPage = () => {
     <>
       <Navbar />
       <PageHeaderCover
-        header={"Blog"}
-        background={
-          "https://t4.ftcdn.net/jpg/02/86/76/77/360_F_286767786_boXM75PDLYIsYWzabZ3fKcM3esv50TNS.jpg"
-        }
+        header={pageHeaders["blog"].header}
+        background={pageHeaders["blog"].background}
       />
       <div className="flex flex-col md:flex-row md:w-1/2 items-center md:items-start mx-auto gap-x-3 ">
         <Blogs data={data} />

@@ -7,7 +7,7 @@ const DayPicker = ({
   setDayAdded,
   currentDate,
 }: DayPickerPropType) => {
-  let thisDate = (
+  const thisDate = (
     <div className="flex flex-col">
       <div>{`${dayNames[currentDay]}`}</div>
       <div>{currentDate}</div>

@@ -1,23 +1,6 @@
-const Footer = () => {
-  const links = [
-    {
-      name: "facebook",
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png",
-    },
-    {
-      name: "instagram",
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png",
-    },
-    {
-      name: "twitter",
-      url: "https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg",
-    },
-    {
-      name: "likedin",
-      url: "https://cdn-icons-png.flaticon.com/256/174/174857.png",
-    },
-  ];
+import { socialLinks } from "../../constant/links";
 
+const Footer = () => {
   const section = [
     { header: "home", links: [{ text: "services" }] },
     { header: "product", links: [{ text: "coach" }] },
@@ -27,6 +10,7 @@ const Footer = () => {
       links: [{ text: "term" }, { text: "privacy" }],
     },
   ];
+
   return (
     <div className="h-[300px] w-full bg-[#D8D8D8] mt-4 p-4 bottom-[0%] ">
       <div className="flex justify-center gap-x-10 m-8 ">
@@ -37,7 +21,7 @@ const Footer = () => {
             facilis, inventore facere dicta voluptatum.
           </p>
           <div className="flex gap-x-3">
-            {links.map((el, index) => (
+            {socialLinks.map((el, index) => (
               <img
                 key={index}
                 src={el.url}

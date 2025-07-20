@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Form from "../components/form/Form";
 import Footer from "../components/Footer";
+import Form from "../components/Form/Form";
 
 const Root = () => {
   const [pageState, setPageState] = useState("register");
+
   return (
     <>
       <Navbar />
@@ -14,13 +15,13 @@ const Root = () => {
           <Form
             setPageState={setPageState}
             pageState={pageState}
-            name={"register"}
+            name="register"
           />
         ) : (
           <Form
             setPageState={setPageState}
             pageState={pageState}
-            name={"login"}
+            name="login"
           />
         )}
         <Outlet />

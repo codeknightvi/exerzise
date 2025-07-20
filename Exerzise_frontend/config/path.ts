@@ -1,0 +1,15 @@
+export const paths = {
+  root: { path: "/" },
+  home: { path: "home" },
+  about: { path: "about" },
+  schedule: { path: "schedule" },
+  scheduleId: { path: "schedule/:exzId" },
+  coach: { path: "coach" },
+  coachId: { path: "coach/:coachId" },
+  coachSchedule: { path: "coach/schedule" },
+  activities: { path: "activities" },
+  user: { path: "user" },
+  blog: { path: "blog" },
+  blogId: { path: "blog/:blogId" },
+  classes: { path: "classes" },
+};

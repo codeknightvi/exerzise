@@ -1,20 +1,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Whoweare from "../components/Whoweare";
 import PageHeaderCover from "../components/PageHeaderCover";
-
+import WhoWeAre from "../components/WhoAreWe";
+import { pageHeaders } from "../../constant/pageHeaders";
 const AboutPage = () => {
   return (
     <>
       <Navbar />
       <PageHeaderCover
-        header={"About"}
-        background={
-          "https://www.transparentpng.com/download/sports/yzYTPJ-multi-sport-program-pictures-png-images-pngio.png"
-        }
+        header={pageHeaders["about"].header}
+        background={pageHeaders["about"].background}
       />
-      <Whoweare />
-      {/* <div>our history</div> */}
+      <WhoWeAre />
       <Footer />
     </>
   );

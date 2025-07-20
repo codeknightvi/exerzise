@@ -1,4 +1,4 @@
-import "../form/Form.css";
+// import "../form/Form.css";
 import { SetStateAction, useState } from "react";
 import styled from "styled-components";
 import { InputFromType } from "../../interfaces";

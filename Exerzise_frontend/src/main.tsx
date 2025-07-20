@@ -17,10 +17,7 @@ import {
   UserPage,
 } from "./pages/index";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import { ProtectedRoute } from "./pages/ProtectedRoute";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import App from "./App";
 import { store } from "./store";
 import { Provider, useDispatch } from "react-redux";
 // RTK Query
@@ -28,20 +25,12 @@ import { ApiProvider } from "@reduxjs/toolkit/query/react";
 import { apiSlice } from "./features/api/apiSlice";
 import { setToken } from "./features/slices/tokenSlice";
 import AlertBox from "./components/AlertBox";
-// import { userApiSlice } from "./features/api/userApiSlice";
 
-// const userlocal = localStorage.getItem("user");
-// const user = userlocal
-//   ? (JSON.parse(userlocal) as userLoginResponse)
-//   : undefined;
-
-// store.dispatch(userApiSlice.endpoints.getAllCoaches.initiate(null));
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
   },
-  // main
   {
     path: "home",
     element: <HomePage />,
@@ -131,18 +120,13 @@ const Test = ({ children }: { children: ReactNode }) => {
       const token = JSON.parse(localToken).token;
       dispatch(setToken({ token: token }));
     }
-    //  else {
-    //   dispatch(setToken({ token: null }));
-    // }
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <ToastProvider>{children};</ToastProvider>
     </>
   );
 };
-
-// const selectRouter = localStorage.getItem("user")! ? coachRouter : commonRouter;
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -151,9 +135,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Test>
           <RouterProvider router={router} />
         </Test>
-        {/* <BrowserRouter>
-          <App /> */}
-        {/* </BrowserRouter> */}
       </Provider>
     </ApiProvider>
   </React.StrictMode>

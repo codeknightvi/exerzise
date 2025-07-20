@@ -6,7 +6,6 @@ import {
   convertByTimeType,
   getOverlappingMinutes,
 } from "../function/extend_index";
-import DayPicker from "../components/DayPicker";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import {
@@ -24,6 +23,7 @@ import { CoachTimeResponse, ForUserBookingType } from "../interfaces";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { useAppSelector } from "../store";
+import DayPicker from "../components/dayPicker";
 
 const CoachDetail = () => {
   const [postBookings] = usePostBookingsMutation();

@@ -1,18 +1,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PageHeaderCover from "../components/PageHeaderCover";
+import { pageHeaders } from "../../constant/pageHeaders";
 
 const ClassPage = () => {
   return (
     <>
       <Navbar />
       <PageHeaderCover
-        header={"Classess"}
-        background={
-          "https://t3.ftcdn.net/jpg/05/09/37/66/360_F_509376624_VhCMojj4LpZxNeidEabWqCsiM0QXtfn7.jpg"
-        }
+        header={pageHeaders["classes"].header}
+        background={pageHeaders["classes"].background}
       />
-      "Coming Soon...."
+      <div className="text-center text-[100px]">"Coming Soon...."</div>
       <Footer />
     </>
   );
