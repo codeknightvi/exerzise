@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { categorize } from "../function";
 import CommonBtn from "../components/CommonBtn";
 import TimePickerValue from "../components/TimePicker";
-import DayPicker from "../components/DayPicker";
 import CoachTimeContainer from "../components/CoachTimeContainer";
 
 import dayjs from "dayjs";
@@ -17,6 +16,7 @@ import {
 import { useAppSelector } from "../store";
 import { TimeSelectedType } from "../interfaces";
 import { toast } from "react-toastify";
+import DayPicker from "../components/dayPicker";
 
 const CoachSchedule = () => {
   const currentCoachId = useAppSelector((state) => state.user.userId);

@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Whoweare from "../components/Whoweare";
 import PageHeaderCover from "../components/PageHeaderCover";
+import WhoWeAre from "../components/WhoAreWe";
 
 const AboutPage = () => {
   return (
@@ -13,8 +13,7 @@ const AboutPage = () => {
           "https://www.transparentpng.com/download/sports/yzYTPJ-multi-sport-program-pictures-png-images-pngio.png"
         }
       />
-      <Whoweare />
-      {/* <div>our history</div> */}
+      <WhoWeAre />
       <Footer />
     </>
   );

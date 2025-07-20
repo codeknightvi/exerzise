@@ -13,18 +13,7 @@ html {
   padding: 0 0;
 }
 .text-header {
-  font-size: 1.5rem;
-}
-
-.universal-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  font-size: 2rem;
 }
 .nav a:hover {
   color: black;
@@ -109,20 +98,9 @@ html {
   background-color: #d8d8d8;
   border-radius: 20px 20px 0 0;
 }
-.stack {
-  bottom: -200px;
-  left: 50%;
-  /* transform: translate(-50%, -50%); */
-}
-.box1 {
-  background-color: black;
-}
+
 .body1 {
   background-image: url("https://images.squarespace-cdn.com/content/v1/5a5fef62a9db0982c2cfdf44/1521131262182-FFIIB0WJWMKU4FXAUIDE/Sports-Training-Banner.jpg?format=1500w");
-  color: white;
-}
-.body1 {
-  /* background-image: url("https://images.squarespace-cdn.com/content/v1/5a5fef62a9db0982c2cfdf44/1521131262182-FFIIB0WJWMKU4FXAUIDE/Sports-Training-Banner.jpg?format=1500w"); */
   color: white;
   background-color: #ffffff;
 }
@@ -131,10 +109,6 @@ html {
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
-.img-container {
-  overflow: hidden;
-  height: 100%;
 }
 .grid-text {
   padding: 50px 30px;

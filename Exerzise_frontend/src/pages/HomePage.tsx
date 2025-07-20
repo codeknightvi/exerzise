@@ -1,6 +1,4 @@
 import Navbar from "../components/Navbar";
-import Bars from "../components/Bars";
-import Body1 from "../components/Body1";
 import FGrid from "../components/FGrid";
 import Footer from "../components/Footer";
 import Testomonials from "../components/Testomonials";
@@ -8,6 +6,9 @@ import Benefits from "../components/Benefits";
 import { ActivitiesBox } from "../components/ActivitiesBox";
 import Gallery from "../components/Gallery";
 import HomeCover from "../components/HomeCover";
+import IncludedService from "../components/IncludedService";
+import WhoWeAre from "../components/WhoAreWe";
+import HomeHeader from "../components/HomeHeader";
 
 const HomePage = () => {
   return (
@@ -16,27 +17,29 @@ const HomePage = () => {
       <HomeCover />
 
       <div className="md:mt-[150px] relative">
-        <Body1 />
+        <WhoWeAre />
         <div className="static md:absolute -top-[270px] left-[50%] md:-translate-x-1/2 ">
-          <Bars />
+          <IncludedService />
         </div>
       </div>
 
       <div className="my-5">
+        <HomeHeader text="Benefits" />
         <Benefits />
       </div>
 
       <div className="my-5">
+        <HomeHeader text="Testomonials" />
         <Testomonials />
       </div>
 
       <div className="my-5">
-        <h1 className="text-2xl text-center my-5">Gallery</h1>
+        <HomeHeader text="Gallery" />
         <Gallery />
       </div>
 
       <div className="my-5">
-        <h1 className="text-2xl text-center my-5">Activities</h1>
+        <HomeHeader text="Activities" />
         <ActivitiesBox />
       </div>
 
