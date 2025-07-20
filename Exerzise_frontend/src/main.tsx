@@ -120,15 +120,13 @@ const Test = ({ children }: { children: ReactNode }) => {
       const token = JSON.parse(localToken).token;
       dispatch(setToken({ token: token }));
     }
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <ToastProvider>{children};</ToastProvider>
     </>
   );
 };
-
-// const selectRouter = localStorage.getItem("user")! ? coachRouter : commonRouter;
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

@@ -73,7 +73,7 @@ export interface FilterBarPropType {
   setFilterState: Dispatch<SetStateAction<string>>;
 }
 
-export interface PageHeaderCoverPropType {
+export interface IPageHeaderCover {
   header: string;
   background: string;
 }
